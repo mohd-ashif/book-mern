@@ -29,8 +29,9 @@ const Home = () => {
   return (
     <div className='p-4'>
       <div className='text-3xl my-8'>
+         
         <Link to='/books/create'>
-          <MdOutlineAddBox className='text-sky-800 text-4xl' />
+          <MdOutlineAddBox className='text-blue text-4xl' />
         </Link>
       </div>
 
@@ -38,6 +39,7 @@ const Home = () => {
         <Spinner />
       ) : (
         <table className='w-full border-separate border-spacing-2'>
+        
           <thead>
             <tr>
               <th className='border border-x-gray rounded-md'>No</th>
