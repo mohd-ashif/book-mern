@@ -1,5 +1,5 @@
 import express from 'express';
-import { PORT, mongoDBURL } from './config.js';
+import { PORT, mongoDB} from './config.js';
 import mongoose from 'mongoose';
 import booksRoute from './route/booksRoute.js';
 import cors from 'cors';
@@ -21,7 +21,7 @@ app.get('/', (request, response) => {
 app.use('/books', booksRoute);
 
 mongoose
-  .connect(mongoDBURL)
+  .connect(mongoDB)
   .then(() => {
     console.log('App connected to database');
     app.listen(PORT, () => {
