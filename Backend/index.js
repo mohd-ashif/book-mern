@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
   return response.status(234).send('Welcome To MERN Stack Tutorial');
 });
 
-app.use('/books', booksRoute);
+app.use('/books', booksRoute);  
 
 mongoose
   .connect(mongoDB)
